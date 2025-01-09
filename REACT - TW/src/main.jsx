@@ -1,12 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { Card } from './MT 6 - Rendering list/Praktek/Racket/Fragments/card'
-import DataUsers from './MT 6 - Rendering list/praktek 2/DataUsers'
-import  App from './MT 7 - Event/praktek'
-import SimpleClick from './MT 7 - Event/praktek'
+import StringComponent from './MT 8 - UseState/coba'
+import SimpleCalculator from './MT 8 - UseState/soal-usetStae'
+import Counter from './MT 8 - UseState/soal-usetStae'
+import LoginStatus from './MT 8 - UseState/soal-usetStae'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <SimpleClick />
+    <LoginStatus/>
   </StrictMode>,
 )
