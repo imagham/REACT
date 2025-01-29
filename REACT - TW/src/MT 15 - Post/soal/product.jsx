@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider, Link, useParams, useNavigate } fro
 import axios from "axios";
 
 // Komponen utama untuk menampilkan daftar produk dan fitur tambah/kurangi jumlah
-const Soal2 = () => {
+const Product = () => {
   const [products, setProducts] = useState([]); // State untuk menyimpan data produk
   const [jumlah, setJumlah] = useState([]); // State untuk menyimpan jumlah setiap produk
 
@@ -182,5 +182,6 @@ const DetailProducts = () => {
 };
 
 // Definisi rute aplikasi
+export {Product, DetailProducts};
 
 

@@ -1,10 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import Links from './MT 14 - useParams/soal2'
+import Login from './MT 15 - Post/soal/login'
+import App from './MT 15 - Post/soal/app'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Links/>
+    <App/>
   </StrictMode>,
 )
