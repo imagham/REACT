@@ -1,5 +1,5 @@
 import { useState } from "react";
-import  axios  from "axios";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -7,7 +7,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [reasponse, setResponse] = useState(null);
   const [error, setError] = useState(null);
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   const handleName = (e) => {
     setUsername(e.target.value);
@@ -19,23 +19,24 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("https://fakestoreapi.com/auth/login", {
-      username: username,
-      password: password,
-    })
+    axios
+      .post("https://fakestoreapi.com/auth/login", {
+        username: username,
+        password: password,
+      })
       .then((res) => {
         setResponse(event.target.value);
-        console.log(res.data.token);   
-        const token = res.data.token;  // Token yang ingin disimpan
+        console.log(res.data.token);
+        const token = res.data.token; // Token yang ingin disimpan
         localStorage.setItem("authToken", token);
         if (token) {
-            navigate("/product");
+          navigate("/product");
         }
       })
       .catch((err) => {
         setError(err.message);
         alert("Gagal mengirim data!");
-        <P>{err.message}</P>
+        <P>{err.message}</P>;
       });
   };
 
@@ -77,7 +78,11 @@ const Login = () => {
           </button>
           <br />
 
-          {error && <p className="text-red-500">Silahkan cek kembali username dan password</p>}
+          {error && (
+            <p className="text-red-500">
+              Silahkan cek kembali username dan password
+            </p>
+          )}
         </div>
         <div className="mt-4">
           <p className="font-medium">username: mor_2314</p>
